@@ -1,26 +1,23 @@
-// 'use strict'
+'use strict';
 
-// algorithm
+var isIsomorphic = function(s, t) {
+  if(s.length != t.length) {
+    return false;
+  }
+  let sMap = {};
+  let tMap = {};
 
-// declare a function that takes in two strings
+  for(let i =0; i < s.lenght; i++){
+    let sCharacters = s[i];
+    let tCharacters = t[i];
 
-//  split each character in the strings
+    if(sMap[sCharacters] == undefined) {
+      sMap[sCharacters] = tCharacters;
+    }
+    if(tMap[tCharacters] == undefined) {
+      tMap[tCharacters] = tCharacters;
+    }
+    if(sMap[sCharacters] != tCharacters || tMap[tCharacters] != sMap)
+  }
+}
 
-//  comparisons to make:
-
-//  does a character exist more than once in string 1
-
-//  does a character exist more than once in string 2
-
-//  do the dupes exist at the same indices in each string?
-
-//  iterate through string 1 and store it in a hash map
-
-//  iterate through string 2 and compare the current index to the key in the map, IF the key already exists, nothing will happen, IF it doesn't the value will be replaced.
-
-// CODE:
-
-// function isIsomorphic  (s, t) {
-
-//  s.split("")
-// }
