@@ -22,3 +22,7 @@ function validateAnagram(first, second) {
   }
   return true;
 }
+
+//using a frequency counter:
+
+//construct an object using a loop and then use a second NOT nested loop
