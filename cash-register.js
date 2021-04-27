@@ -34,31 +34,27 @@
 //   ["TWENTY", 60],
 //   ["ONE HUNDRED", 100]
 // ]
-// checkCashRegister(19.5, 20, [["PENNY", 1.01], ["NICKEL", 2.05], ["DIME", 3.1], ["QUARTER", 4.25], ["ONE", 90], ["FIVE", 55], ["TEN", 20], ["TWENTY", 60], ["ONE HUNDRED", 100]]) should return an object.
 
-// checkCashRegister(19.5, 20, [["PENNY", 1.01], ["NICKEL", 2.05], ["DIME", 3.1], ["QUARTER", 4.25], ["ONE", 90], ["FIVE", 55], ["TEN", 20], ["TWENTY", 60], ["ONE HUNDRED", 100]]) should return {status: "OPEN", change: [["QUARTER", 0.5]]}.
-
-// checkCashRegister(3.26, 100, [["PENNY", 1.01], ["NICKEL", 2.05], ["DIME", 3.1], ["QUARTER", 4.25], ["ONE", 90], ["FIVE", 55], ["TEN", 20], ["TWENTY", 60], ["ONE HUNDRED", 100]]) should return {status: "OPEN", change: [["TWENTY", 60], ["TEN", 20], ["FIVE", 15], ["ONE", 1], ["QUARTER", 0.5], ["DIME", 0.2], ["PENNY", 0.04]]}.
-
-// checkCashRegister(19.5, 20, [["PENNY", 0.01], ["NICKEL", 0], ["DIME", 0], ["QUARTER", 0], ["ONE", 0], ["FIVE", 0], ["TEN", 0], ["TWENTY", 0], ["ONE HUNDRED", 0]]) should return {status: "INSUFFICIENT_FUNDS", change: []}.
-
-// checkCashRegister(19.5, 20, [["PENNY", 0.01], ["NICKEL", 0], ["DIME", 0], ["QUARTER", 0], ["ONE", 1], ["FIVE", 0], ["TEN", 0], ["TWENTY", 0], ["ONE HUNDRED", 0]]) should return {status: "INSUFFICIENT_FUNDS", change: []}.
-
-// checkCashRegister(19.5, 20, [["PENNY", 0.5], ["NICKEL", 0], ["DIME", 0], ["QUARTER", 0], ["ONE", 0], ["FIVE", 0], ["TEN", 0], ["TWENTY", 0], ["ONE HUNDRED", 0]]) should return {status: "CLOSED", change: [["PENNY", 0.5], ["NICKEL", 0], ["DIME", 0], ["QUARTER", 0], ["ONE", 0], ["FIVE", 0], ["TEN", 0], ["TWENTY", 0], ["ONE HUNDRED", 0]]}.
-
-
-
+//declare a function that takes in a price, cash, and cash in drawer as arguments
 function checkCashRegister(price, cash, cid) {
+  //create a status object that has a string and the cash in drawer as properties
   let cashInDrawer = { 
     status: '', 
     change: cid 
   };
+  //declare a function to control the rounding of numbers in JS  
   const changeNeeded = parseFloat(cash - price).toFixed(2);
   //toFixed() sets the number of decimals points a floating number will be rounded and paresFloat() sets the
-  const changeInDrawer = getTotal(cid);
-
-}
-
+  //declare a function that determines if there is enough change in the drawer
+//write a function that will get the total cash in drawer
+const changeAvailable = getTotal(cid);
+console.log(changeAvaileable)
 function getTotal(cid) {
-
+  //2D array, target 1st index
+  for (let change of change in drawer) {
+    let changeVal = change[1];
+    total += change[1];
+  }
+  return changeNeeded;
+  }
 }
