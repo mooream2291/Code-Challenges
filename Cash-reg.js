@@ -48,7 +48,7 @@ function checkCashRegister(price, cash, cid) {
   //declare a function that determines if there is enough change in the drawer
 //write a function that will get the total cash in drawer
 const changeAvailable = getTotal(cid);
-console.log(changeAvaileable)
+console.log(changeAvailable)
 function getTotal(cid) {
   //2D array, target 1st index
   for (let change of change in drawer) {
@@ -58,4 +58,3 @@ function getTotal(cid) {
   return changeNeeded;
   }
 }
-checkCashRegister(19.5, 20, [["penny, 1.01"], ["nickel", 2.05], ["dime", 3.1], ["quarter", 4.25], ["one", 90], ["five", 100], ["ten", 110], ["twenty", 200], ["one-hundred", 100]])
