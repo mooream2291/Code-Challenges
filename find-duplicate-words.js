@@ -24,4 +24,20 @@ function findDuplicates(arr) {
   }
 }
 
-//using two pointer method
+//O(1)
+
+function findDuplicates(arr) {
+
+let start = 0;
+
+let end = arr.length -1;
+
+let count = 0
+  
+while(start < end) {
+  if(arr[start] == arr[end])
+  count ++
+}
+return count;
+
+}
