@@ -33,7 +33,7 @@ let start = 0;
 let end = arr.length -1;
 
 let count = 0
-  
+//while loop is infinate, needs a way to iterate 
 while(start < end) {
   if(arr[start] == arr[end])
   count ++
