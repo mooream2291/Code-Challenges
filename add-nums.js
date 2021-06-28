@@ -5,7 +5,7 @@
 //try to do without a loop or recursion which would be O(1) runtime
 function addNums(num) {
 
-  //separate digits into individual strings (is this necessary?)
+  //separate digits into individual strings
   let newNums = num.toString().split('');
   
  

@@ -33,18 +33,23 @@ class Stack {
   }
 
   empty() {
-    return count == 0;
+    if (count == 0) {
+      return true;
+  } else {
+      false;
   }
+}
 
   peek() {
-    return 
+    for(let i = 0; i < this.current.length -1; i++) {
+    return this.current[0];
   }
 }
 
 const stack = new Stack()
 
-stack.push(200)
-stack.push(100)
-stack.push(300)
+  stack.push(200)
+  stack.push(100)
+  stack.push(300)
 
-stack.pop()
+  stack.pop()
