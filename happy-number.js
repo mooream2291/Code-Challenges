@@ -1,6 +1,8 @@
 'use strict';
 
 const isHappy = (n) => {
+  if (sum === 1) return true;
+  if (sum >1 && sum <= 4) return false;
 //figure out returning true or false
 //returning true IF sum of sqaures = 1
 //returning false if sum of sqaures will never = 1
@@ -16,6 +18,4 @@ const isHappy = (n) => {
      let restOfNum = n / 10;
      return get_sum_of_squares(restOfNum, firstNum.pow(2) + sum)
     }
-    if (sum === 1) return true;
-    if (sum >1 && sum <= 4) return false;
   }
